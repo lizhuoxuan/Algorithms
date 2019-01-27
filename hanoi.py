@@ -24,6 +24,6 @@ def hanoi_steps(n, x, y, z):
 
 
 if __name__ == '__main__':
-    n = 3
-    print(hanoi(n))
-    hanoi_steps(n, 'a', 'b', 'c')
+    num = 3
+    print(hanoi(num))
+    hanoi_steps(num, 'a', 'b', 'c')
