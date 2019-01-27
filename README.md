@@ -1,3 +1,3 @@
 # Algorithms
 Algorithm study
-language: groovy
+language: python3
