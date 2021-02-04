@@ -6,13 +6,13 @@ import sys
 max_int = sys.maxsize
 
 
-def dp(m, coin_list):
+def coin_change(m, coin_list):
     m_list = [0]
     for i in range(m + 1):
         if i > 0:
             m_list.append(max_int)
         for coin in coin_list:
-            # 如果钱数大于等于
+            # 如果钱数大于等于硬币的面额
             if i - coin >= 0 and m_list[i - coin] != max_int:
                 m_list[i] = min(m_list[i], m_list[i - coin] + 1)
     if m_list[m] == max_int:
@@ -22,4 +22,4 @@ def dp(m, coin_list):
 
 if __name__ == '__main__':
     coin_list = [2, 5, 7]
-    print(dp(27, coin_list))
+    print(coin_change(27, coin_list))
